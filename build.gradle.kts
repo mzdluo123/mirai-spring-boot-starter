@@ -11,8 +11,7 @@ plugins {
 val mirai_version = "2.4.0"
 val spring_version = "2.4.3"
 
-group = "io.github.mzdluo123"
-version = mirai_version
+group = "com.github.mzdluo123"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
