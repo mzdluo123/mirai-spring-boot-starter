@@ -1,10 +1,7 @@
 package io.github.mzdluo123.miraispringbootstarter.config
 
 import io.github.mzdluo123.miraispringbootstarter.properties.MiraiProperties
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import net.mamoe.mirai.Bot
 import net.mamoe.mirai.BotFactory
 import net.mamoe.mirai.event.GlobalEventChannel
@@ -43,7 +40,9 @@ class SpringBotFactory : CoroutineScope {
     }
 
     suspend fun exit(bot:Bot) {
-        bot.join()
+        while (bot.isActive){
+            bot.join()
+        }
         exitProcess(-1)
     }
 }
