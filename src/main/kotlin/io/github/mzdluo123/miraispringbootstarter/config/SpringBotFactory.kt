@@ -32,9 +32,9 @@ class SpringBotFactory : CoroutineScope {
             if (!config.enableNetLog) {
                 this.noNetworkLog()
             } else {
-                this.networkLoggerSupplier = { SpringBotLogger("BOT-NET ${config.uid}") }
+                this.networkLoggerSupplier = { SpringBotLogger("mirai.bot.${config.uid}") }
             }
-            this.botLoggerSupplier = { SpringBotLogger("BOT ${config.uid}") }
+            this.botLoggerSupplier = { SpringBotLogger("mirai.bot.network.${config.uid}") }
 
         }
         val bot = BotFactory.newBot(config.uid, config.password, botConfig)
