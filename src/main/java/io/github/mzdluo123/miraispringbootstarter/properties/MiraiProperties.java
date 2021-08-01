@@ -19,6 +19,9 @@ public class MiraiProperties {
     @NotNull
     private String deviceConfig="device.json";
 
+    @NotNull
+    private String protocol = "ANDROID_PAD";
+
     public Long getUid() {
         return uid;
     }
@@ -59,5 +62,13 @@ public class MiraiProperties {
 
     public void setWorkingDir(String workingDir) {
         this.workingDir = workingDir;
+    }
+
+    public String getProtocol() {
+        return protocol;
+    }
+
+    public void setProtocol(String protocol) {
+        this.protocol = protocol;
     }
 }

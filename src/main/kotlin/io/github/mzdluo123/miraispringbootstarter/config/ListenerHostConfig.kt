@@ -18,9 +18,8 @@ import org.springframework.core.type.filter.TypeFilter
 class ListenerHostConfig(private val applicationContext: AnnotationConfigApplicationContext) {
     @PostConstruct
     fun init() {
-        applicationContext.getBeansOfType(ListenerHost::class.java).forEach { (t, u) ->
+        applicationContext.getBeansOfType(ListenerHost::class.java).forEach { (_, u) ->
             GlobalEventChannel.registerListenerHost(u)
         }
-
     }
 }

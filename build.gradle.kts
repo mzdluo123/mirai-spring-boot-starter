@@ -8,11 +8,11 @@ plugins {
     id("maven")
 }
 
-val mirai_version = "2.4.0"
+val mirai_version = "2.7-RC-dev-1"
 val spring_version = "2.4.3"
 
 group = "com.github.mzdluo123"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
@@ -20,13 +20,13 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter:$spring_version")
+    runtimeOnly("org.springframework.boot:spring-boot-starter:$spring_version")
     implementation("org.springframework.boot:spring-boot-starter-validation:$spring_version")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:$spring_version")
-    api("net.mamoe:mirai-core-jvm:$mirai_version")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
+    api("net.mamoe:mirai-core:$mirai_version")
+//    implementation("org.jetbrains.kotlin:kotlin-reflect")
+//    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
 //    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
