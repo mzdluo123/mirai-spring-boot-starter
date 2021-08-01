@@ -27,6 +27,8 @@ mirai.password= 密码
 
 # 编写代码
 
+**请使用`Kotlin1.4`版本，1.5版本存在问题**
+
 ```kotlin
 @Controller
 class TestController: SimpleListenerHost() {

@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 //    id("org.springframework.boot") version "2.4.3" apply false
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    kotlin("jvm") version "1.5.10"
+    kotlin("jvm") version "1.4.30"
     kotlin("plugin.spring") version "1.4.30"
     id("maven")
 }
@@ -26,7 +26,7 @@ dependencies {
     api("net.mamoe:mirai-core:$mirai_version")
 //    implementation("org.jetbrains.kotlin:kotlin-reflect")
 //    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
+//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
 //    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
