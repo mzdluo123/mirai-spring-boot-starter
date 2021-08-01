@@ -22,8 +22,10 @@ class TestController: SimpleListenerHost() {
      suspend fun onFriendMessage(event: FriendMessageEvent){
         if ( event.message.contentToString() == "你好"){
             event.friend.sendMessage("你好呀")
-
         }
+    }
+    fun useless(): TestController {
+        return TestController()
     }
 }
 
