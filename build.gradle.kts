@@ -23,7 +23,15 @@ dependencies {
     runtimeOnly("org.springframework.boot:spring-boot-starter:$spring_version")
     implementation("org.springframework.boot:spring-boot-starter-validation:$spring_version")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:$spring_version")
-    compileOnly("net.mamoe:mirai-core-jvm:$mirai_version")
+    api("net.mamoe:mirai-core-jvm:$mirai_version") {
+        exclude("net.mamoe","mirai-core-api")
+        exclude("net.mamoe","mirai-core-utils")
+    }
+    api("net.mamoe:mirai-core-api-jvm:$mirai_version") {
+        exclude("net.mamoe", "mirai-core-utils")
+    }
+    api("net.mamoe:mirai-core-utils-jvm:$mirai_version")
+//    compileOnly("net.mamoe:mirai-core-jvm:$mirai_version")
 //    implementation("org.jetbrains.kotlin:kotlin-reflect")
 //    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 //    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1")
