@@ -8,7 +8,7 @@ plugins {
     id("maven")
 }
 
-val mirai_version = "2.7.1-dev-1"
+val mirai_version = "2.8.3"
 val spring_version = "2.4.3"
 
 group = "com.github.mzdluo123"

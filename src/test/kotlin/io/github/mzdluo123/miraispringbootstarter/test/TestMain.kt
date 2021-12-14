@@ -24,9 +24,6 @@ class TestController: SimpleListenerHost() {
             event.friend.sendMessage("你好呀")
         }
     }
-    fun useless(): TestController {
-        return TestController()
-    }
 }
 
 
